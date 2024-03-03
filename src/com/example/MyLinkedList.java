@@ -86,7 +86,12 @@ public class MyLinkedList<E> implements MyList<E> {
      */
     @Override
     public void sort(Comparator<? super E> c) {
-
+       first =  sortList(first, c);
+       Node<E> current =first;
+       while(current.next !=null){
+           current = current.next;
+       }
+       last = current;
     }
 
     /**
